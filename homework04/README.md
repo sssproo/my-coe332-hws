@@ -44,13 +44,34 @@ Running the Code
    
  Sample output
  --
- * The entire data set
+ * The entire data set.
  ```
+<EPOCH>2023-048T12:20:00.000Z</EPOCH>
+                        <X units="km">-5063.01655412946</X>
+                        <Y units="km">-3888.6472910294901</Y>
+                        <Z units="km">2302.9065286659102</Z>
+                        <X_DOT units="km/s">4.6388138749528096</X_DOT>
+                        <Y_DOT units="km/s">-2.8228432495973399</Y_DOT>
+                        <Z_DOT units="km/s">5.4174928915010803</Z_DOT>
+```
+* A list of all Epochs in the data set.
+```
+<EPOCH>2023-048T14:16:00.000Z</EPOCH>
+<EPOCH>2023-048T14:20:00.000Z</EPOCH>
+```
+* State vectors for a specific Epoch from the data set.
+```
+<X units="km">4088.6810739994698</X>
+<Y units="km">-2531.86624046617</Y>
+<Z units="km">4794.4381789315503</Z>
+```
+* Instantaneous speed for a specific Epoch in the data set.
+```
+<X_DOT units="km/s">5.7520747044379101</X_DOT>
+<Y_DOT units="km/s">4.3451316656044199</Y_DOT>
+<Z_DOT units="km/s">-2.59528004498392</Z_DOT>
 
 ```
-* A list of all Epochs in the data set
-* State vectors for a specific Epoch from the data set
-* Instantaneous speed for a specific Epoch in the data set (math required!)
 
 
 
