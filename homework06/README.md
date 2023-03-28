@@ -31,4 +31,4 @@ A Flask web application for fetching, storing, and retrieving HGNC gene data usi
      depends_on:
        - redis
 4. Run docker-compose up from the root directory of the project.
-5. Access the application at http://localhost:5000.
+5. Access the application at http://localhost:5000. 
