@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ssspro-test-flask
+  labels:
+    username: ssspro
+    env: test
+spec:
+  type: ClusterIP
+  selector:
+    app: ssspro-test-flask
+  ports:
+    - protocol: TCP
+      port: 5000
+      targetPort: 5000
