@@ -1,0 +1,30 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ssspro-test-redis
+  labels:
+    username: ssspro
+    env: test
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ssspro-test-redis
+  template:
+    metadata:
+      labels:
+        app: ssspro-test-redis
+        username: ssspro
+        env: test
+    spec:
+      containers:
+      - name: redis
+        image: redis:7
+        volumeMounts:
+        - name: redis-data
+          mountPath: /data
+      volumes:
+      - name: redis-data
+        persistentVolumeClaim:
+          claimName: ssspro-test-redis-pvc

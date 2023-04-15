@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ssspro-test-flask
+  labels:
+    username: ssspro
+    env: test
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: ssspro-test-flask
+  template:
+    metadata:
+      labels:
+        app: ssspro-test-flask
+        username: ssspro
+        env: test
+    spec:
+      containers:
+      - name: flask
+        image: ssspro/hw08
+        ports:
+        - containerPort: 5000
+        env:
+        - name: REDIS_IP
+          value: ssspro-test-redis
